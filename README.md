@@ -1,7 +1,7 @@
 # 🔐Sextillion-Pass-Gen🔐
 ---
 ## 🛡️ Sextillion-Pass-Gen is a random password generator that has multiple random hash combinations of at least 128 characters and also uses raw bytes and special characters.🛡️ 🛡️
- [GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
+ ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ----
  
