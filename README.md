@@ -37,3 +37,9 @@ Unlike weak, human-made passwords, the outputs generated here are immune to mode
 1. **No Rainbow Tables**: Precomputed hash databases (rainbow tables) are totally useless because they cannot map raw non-printable system bytes and rare symbols.
 2. **Heavy Computations**: Algorithms like SHA-512 and BLAKE2b require immense processor power. While a modern high-end GPU can crack millions of simple MD5 hashes per second, it chokes heavily on SHA-512 block computations.
 3. **The 250-Million-Year Wall**: A dedicated hacker cluster running **10,000 top-tier mining graphics cards** would have to grind continuously for over **250 million years** and burn a budget larger than the Earth's total economy just to guess a single master key from this engine.
+4. ## 🌍 100% Free & Open Source (The Unlicense)
+
+This project is **100% free software** and is dedicated entirely to the public domain. 
+
+There are **zero restrictions, zero copyrights, and zero legal limits**. You are completely free to copy, modify, butcher, rewrite, distribute, or sell this code, even for hardcore commercial purposes, without asking for any permission or leaving credits. It belongs to the internet now.
+
