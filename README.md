@@ -11,3 +11,7 @@ t.me/k1rpit718s
 ---
  ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
  ![Debian](https://img.shields.io/badge/Debian-A81D33?style=flat&logo=debian&logoColor=white)
+---
+## ⚙️method|strategy⚙️
+
+**🔒The password is generated from 6 blocks, 1 of which is raw bytes converted into strings.🔒**
