@@ -1,7 +1,7 @@
 import random
 import hashlib
 import os
-import base64
+import base64;import secrets
 
 data = [
     'sha', 'md', 'Yt-p', '4rg', 'uui9', '0-0', 'r5f', 'R5p', 'OpO', 'Qw+=', 'p*1', 'p3!',
@@ -33,6 +33,7 @@ data = [
     '!#+_R}I)@E}OFUiwhdljb}', '$#R#*/FOEHJ}', '12-3e0fjefdfv'
 ]
 
+xx = secrets.SystemRandom()
 
 data1 = [
     'a1f4f','r$_p03','h4fu7','3fh&8**','maiop9_=$21q','h3cj48c+','><j38cm34ef','>2j,132ef',
@@ -131,7 +132,12 @@ data4 = [
     '!_#}RUE@OY:IFHL','!)$@_(REUOFIH)',')@e[fiupihgdh]',
     '|+#_}@fj32ef','!#_}f-=+','!#_(@)w3efr','+)#_vf320re[foh]',
     '!#+_R}I)@E}OFUiwhdljb}','$#R#*/FOEHJ}','12-3e0fjefdfv',
-    '+++++++','+++++=====','{---3',':3',':::;;:::;;::::;;;:'
+    '+++++++','+++++=====','{---3',':3',':::;;:::;;::::;;;:',
+    '~@P(!OGH123erfwdv)','!@+#*(M#EOU:DIYLJGH)','!@|+_EIOUDHJ',
+    '!@{)#UIYELFUWGHD}','!-#@|+F}_)PIDLUHDD}','*+','+','+#_)EOIUIU)_#)',
+    '@*(E#IYUDGH!)','WIOQIHCDWGN','&!^@RUEWPEIYD','#_E@IFYUDH',
+    '_P"E:<D','!#PEODW%IFHG}','UI&&HY&Y&YY&Y','*+OF*RF','_-_JJj',
+    ')(*#&YEDGBC)','(1)(2)(3)(4)(5)(((10)))','([([)])])'
 ]
 
 data5 = [
@@ -140,9 +146,23 @@ data5 = [
     '~|~|~','~|~','|rf~|'
 ]
 data6 = [
-    '!', '@', '#', '$', '%', '^', '&', '*', '(', ')',
-    '~_~', '!', '?', '@_@', '#_#', '$==$', '***', '&&&'
+    '!\/\/', '@|\|', '#~@!$%', '$=-_+', '%Z^^^', '43&', '*$#$', '(', ')',
+    '~_~', '!', '?', '@_@', '#_#', '$==$', '***', '&&&','><<>><<>><<><',
+    '?>?<?<?>?<?<?<?<','*+-+*+--+','!(@#&()&!#&!)#&)!&#','}{[]}}','?!',
+    '|\/\/\/\/\/|','|_|_|_|_|','::::;:;;;::;::::5','[[[[[[[[[]]]]]]]]]',
+    '****************','||||||||||||||||||||','~~~~~~~~~~~~~~~~~~~~~~~`'
 ]
+
+data7 = [
+    'RM96ksPA==','QeThO0==','|\||==',"$E^RDf==",'DTVY==',
+    'T*&YUHo==','^*!#EGWUD==','!@U#UEWJIPDE==','==','!#@EJOP==',
+    '****==','//??==','!#)I()EJ==','====','2owe0do==','||==',
+    '@WOIJD==','-+*/==','@Ieowdked==','!~WU!hdbkcjhijefu9==',
+    '@Pew[d==]==','ewydfdouj==','93yuef==','/z/xc/x=='
+    '/x1/x1/x1==','x1==','x11==',':::==','+_!)W(@IEUGYDWFWGUY(U==',
+    '&&&&&==','_@)EWUIyduudw2791==','10001110001==','~root#%~==',
+    '100x100x100x==','=+==','_@wew=--==','~~!~~!]]=='
+    ]
 
 
 RED = '\033[31m'
@@ -153,180 +173,180 @@ def random_pw():
     global q
     A = random.randint(1,29)
     if A == 1:
-        q1 = random.choice(data6)
-        q2 = random.choice(data1)
-        q3 = random.choice(data2)
-        q4 = random.choice(data3)
-        q5 = random.choice(data3)
+        q1 = xx.choice(data6)
+        q2 = xx.choice(data1)
+        q3 = xx.choice(data2)
+        q4 = xx.choice(data7)
+        q5 = xx.choice(data3)
     elif A == 2:
-        q1 = random.choice(data)
-        q2 = random.choice(data1)
-        q3 = random.choice(data1)
-        q4 = random.choice(data3)
-        q5 = random.choice(data)
+        q1 = xx.choice(data7)
+        q2 = xx.choice(data1)
+        q3 = xx.choice(data1)
+        q4 = xx.choice(data3)
+        q5 = xx.choice(data)
     elif A == 3:
-        q1 = random.choice(data1)
-        q2 = random.choice(data3)
-        q3 = random.choice(data1)
-        q4 = random.choice(data6)
-        q5 = random.choice(data1)
+        q1 = xx.choice(data7)
+        q2 = xx.choice(data3)
+        q3 = xx.choice(data1)
+        q4 = xx.choice(data6)
+        q5 = xx.choice(data7)
     elif A == 4:
-        q1 = random.choice(data1)
-        q2 = random.choice(data1)
-        q3 = random.choice(data1)
-        q4 = random.choice(data1)
-        q5 = random.choice(data1)
+        q1 = xx.choice(data1)
+        q2 = xx.choice(data1)
+        q3 = xx.choice(data1)
+        q4 = xx.choice(data1)
+        q5 = xx.choice(data1)
     elif A == 5:
-        q1 = random.choice(data)
-        q2 = random.choice(data)
-        q3 = random.choice(data)
-        q4 = random.choice(data)
-        q5 = random.choice(data)
+        q1 = xx.choice(data)
+        q2 = xx.choice(data7)
+        q3 = xx.choice(data)
+        q4 = xx.choice(data7)
+        q5 = xx.choice(data)
     elif A == 6:
-        q1 = random.choice(data3)
-        q2 = random.choice(data3)
-        q3 = random.choice(data3)
-        q4 = random.choice(data3)
-        q5 = random.choice(data3)
+        q1 = xx.choice(data3)
+        q2 = xx.choice(data7)
+        q3 = xx.choice(data3)
+        q4 = xx.choice(data3)
+        q5 = xx.choice(data3)
     elif A == 7:
-        q1 = random.choice(data2)
-        q2 = random.choice(data2)
-        q3 = random.choice(data6)
-        q4 = random.choice(data2)
-        q5 = random.choice(data2)
+        q1 = xx.choice(data2)
+        q2 = xx.choice(data2)
+        q3 = xx.choice(data6)
+        q4 = xx.choice(data2)
+        q5 = xx.choice(data2)
     elif A == 8:
-        q1 = random.choice(data1)
-        q2 = random.choice(data5)
-        q3 = random.choice(data1)
-        q4 = random.choice(data3)
-        q5 = random.choice(data6)
+        q1 = xx.choice(data1)
+        q2 = xx.choice(data5)
+        q3 = xx.choice(data7)
+        q4 = xx.choice(data3)
+        q5 = xx.choice(data6)
     elif A == 9:
-        q1 = random.choice(data6)
-        q2 = random.choice(data3)
-        q3 = random.choice(data5)
-        q4 = random.choice(data3)
-        q5 = random.choice(data)
+        q1 = xx.choice(data6)
+        q2 = xx.choice(data3)
+        q3 = xx.choice(data5)
+        q4 = xx.choice(data3)
+        q5 = xx.choice(data7)
     elif A == 10:
-        q1 = random.choice(data3)
-        q2 = random.choice(data5)
-        q3 = random.choice(data1)
-        q4 = random.choice(data2)
-        q5 = random.choice(data3)
+        q1 = xx.choice(data7)
+        q2 = xx.choice(data5)
+        q3 = xx.choice(data1)
+        q4 = xx.choice(data2)
+        q5 = xx.choice(data3)
     elif A == 11:
-        q1 = random.choice(data)
-        q2 = random.choice(data)
-        q3 = random.choice(data1)
-        q4 = random.choice(data)
-        q5 = random.choice(data)
+        q1 = xx.choice(data)
+        q2 = xx.choice(data7)
+        q3 = xx.choice(data1)
+        q4 = xx.choice(data)
+        q5 = xx.choice(data)
     elif A == 12:
-        q1 = random.choice(data)
-        q2 = random.choice(data3)
-        q3 = random.choice(data6)
-        q4 = random.choice(data)
-        q5 = random.choice(data)
+        q1 = xx.choice(data)
+        q2 = xx.choice(data3)
+        q3 = xx.choice(data6)
+        q4 = xx.choice(data)
+        q5 = xx.choice(data7)
     elif A == 13:
-        q1 = random.choice(data5)
-        q2 = random.choice(data)
-        q3 = random.choice(data)
-        q4 = random.choice(data6)
-        q5 = random.choice(data1)
+        q1 = xx.choice(data5)
+        q2 = xx.choice(data)
+        q3 = xx.choice(data)
+        q4 = xx.choice(data6)
+        q5 = xx.choice(data7)
     elif A == 14:
-        q1 = random.choice(data3)
-        q2 = random.choice(data)
-        q3 = random.choice(data)
-        q4 = random.choice(data)
-        q5 = random.choice(data3)
+        q1 = xx.choice(data3)
+        q2 = xx.choice(data4)
+        q3 = xx.choice(data7)
+        q4 = xx.choice(data2)
+        q5 = xx.choice(data5)
     elif A == 15:
-        q1 = random.choice(data5)
-        q2 = random.choice(data3)
-        q3 = random.choice(data3)
-        q4 = random.choice(data3)
-        q5 = random.choice(data3)
+        q1 = xx.choice(data5)
+        q2 = xx.choice(data6)
+        q3 = xx.choice(data3)
+        q4 = xx.choice(data4)
+        q5 = xx.choice(data7)
     elif A == 16:
-        q1 = random.choice(data3)
-        q2 = random.choice(data6)
-        q3 = random.choice(data3)
-        q4 = random.choice(data2)
-        q5 = random.choice(data3)
+        q1 = xx.choice(data3)
+        q2 = xx.choice(data6)
+        q3 = xx.choice(data3)
+        q4 = xx.choice(data7)
+        q5 = xx.choice(data3)
     elif A == 17:
-        q1 = random.choice(data1)
-        q2 = random.choice(data3)
-        q3 = random.choice(data1)
-        q4 = random.choice(data)
-        q5 = random.choice(data)
+        q1 = xx.choice(data1)
+        q2 = xx.choice(data3)
+        q3 = xx.choice(data1)
+        q4 = xx.choice(data)
+        q5 = xx.choice(data7)
     elif A == 18:
-        q1 = random.choice(data)
-        q2 = random.choice(data3)
-        q3 = random.choice(data)
-        q4 = random.choice(data6)
-        q5 = random.choice(data2)
+        q1 = xx.choice(data7)
+        q2 = xx.choice(data3)
+        q3 = xx.choice(data)
+        q4 = xx.choice(data6)
+        q5 = xx.choice(data2)
     elif A == 19:
-        q1 = random.choice(data3)
-        q2 = random.choice(data1)
-        q3 = random.choice(data5)
-        q4 = random.choice(data)
-        q5 = random.choice(data2) 
+        q1 = xx.choice(data4)
+        q2 = xx.choice(data7)
+        q3 = xx.choice(data5)
+        q4 = xx.choice(data)
+        q5 = xx.choice(data2) 
     elif A == 20:
-        q1 = random.choice(data4)
-        q2 = random.choice(data4)
-        q3 = random.choice(data4)
-        q4 = random.choice(data4)
-        q5 = random.choice(data2) 
+        q1 = xx.choice(data4)
+        q2 = xx.choice(data4)
+        q3 = xx.choice(data4)
+        q4 = xx.choice(data4)
+        q5 = xx.choice(data2) 
     elif A == 21:
-        q1 = random.choice(data1)
-        q2 = random.choice(data2)
-        q3 = random.choice(data)
-        q4 = random.choice(data5)
-        q5 = random.choice(data6) 
+        q1 = xx.choice(data1)
+        q2 = xx.choice(data2)
+        q3 = xx.choice(data7)
+        q4 = xx.choice(data5)
+        q5 = xx.choice(data6) 
     elif A == 22:
-        q1 = random.choice(data4)
-        q2 = random.choice(data4)
-        q3 = random.choice(data4)
-        q4 = random.choice(data4)
-        q5 = random.choice(data4) 
+        q1 = xx.choice(data4)
+        q2 = xx.choice(data4)
+        q3 = xx.choice(data4)
+        q4 = xx.choice(data7)
+        q5 = xx.choice(data4) 
     elif A == 23:
-        q1 = random.choice(data3)
-        q2 = random.choice(data4)
-        q3 = random.choice(data5)
-        q4 = random.choice(data4)
-        q5 = random.choice(data5) 
+        q1 = xx.choice(data3)
+        q2 = xx.choice(data4)
+        q3 = xx.choice(data5)
+        q4 = xx.choice(data4)
+        q5 = xx.choice(data5) 
     elif A == 24:
-        q1 = random.choice(data3)
-        q2 = random.choice(data3)
-        q3 = random.choice(data4)
-        q4 = random.choice(data4)
-        q5 = random.choice(data5) 
+        q1 = xx.choice(data3)
+        q2 = xx.choice(data3)
+        q3 = xx.choice(data4)
+        q4 = xx.choice(data4)
+        q5 = xx.choice(data5) 
     elif A == 25:
-        q1 = random.choice(data3)
-        q2 = random.choice(data5)
-        q3 = random.choice(data5)
-        q4 = random.choice(data5)
-        q5 = random.choice(data3)
+        q1 = xx.choice(data3)
+        q2 = xx.choice(data5)
+        q3 = xx.choice(data7)
+        q4 = xx.choice(data5)
+        q5 = xx.choice(data3)
     elif A == 26:
-        q1 = random.choice(data)
-        q2 = random.choice(data5)
-        q3 = random.choice(data5)
-        q4 = random.choice(data5)
-        q5 = random.choice(data)
+        q1 = xx.choice(data7)
+        q2 = xx.choice(data5)
+        q3 = xx.choice(data5)
+        q4 = xx.choice(data5)
+        q5 = xx.choice(data)
     elif A == 27:
-        q1 = random.choice(data1)
-        q2 = random.choice(data5)
-        q3 = random.choice(data5)
-        q4 = random.choice(data5)
-        q5 = random.choice(data1)
+        q1 = xx.choice(data1)
+        q2 = xx.choice(data5)
+        q3 = xx.choice(data5)
+        q4 = xx.choice(data5)
+        q5 = xx.choice(data1)
     elif A == 28:
-        q1 = random.choice(data2)
-        q2 = random.choice(data5)
-        q3 = random.choice(data5)
-        q4 = random.choice(data5)
-        q5 = random.choice(data2)
+        q1 = xx.choice(data)
+        q2 = xx.choice(data5)
+        q3 = xx.choice(data5)
+        q4 = xx.choice(data5)
+        q5 = xx.choice(data)
     elif A == 29:
-        q1 = random.choice(data4)
-        q2 = random.choice(data5)
-        q3 = random.choice(data5)
-        q4 = random.choice(data5)
-        q5 = random.choice(data4)
-    k = random.randint(1,10)
+        q1 = xx.choice(data7)
+        q2 = xx.choice(data7)
+        q3 = xx.choice(data7)
+        q4 = xx.choice(data7)
+        q5 = xx.choice(data7)
+    k = xx.randint(1,12)
     salt_bytes = os.urandom(k)
     salt_string = base64.b64encode(salt_bytes).decode('utf-8')  
 
@@ -341,7 +361,7 @@ def random_pw():
 def hach_1():
     global e
     global p
-    r = random.randint(1,3)
+    r = xx .randint(1,3)
     if r == 1:
         e = hashlib.sha512(q.encode()).hexdigest()
         p = 'sha512'
@@ -351,6 +371,7 @@ def hach_1():
     elif r == 3:
         e = hashlib.blake2b(q.encode()).hexdigest()
         p = 'blake2b'
+    
     return e,p
 
 
