@@ -1,7 +1,7 @@
 import random
 import hashlib
 import os
-import base64;import secrets
+import base64;import secrets,json
 
 data = [
     'sha', 'md', 'Yt-p', '4rg', 'uui9', '0-0', 'r5f', 'R5p', 'OpO', 'Qw+=', 'p*1', 'p3!',
@@ -158,7 +158,7 @@ data7 = [
     'T*&YUHo==','^*!#EGWUD==','!@U#UEWJIPDE==','==','!#@EJOP==',
     '****==','//??==','!#)I()EJ==','====','2owe0do==','||==',
     '@WOIJD==','-+*/==','@Ieowdked==','!~WU!hdbkcjhijefu9==',
-    '@Pew[d==]==','ewydfdouj==','93yuef==','/z/xc/x=='
+    '@Pew[d==]==','ewydfdouj==','93yuef==','/z/xc/x==', 'hOneyPot==',
     '/x1/x1/x1==','x1==','x11==',':::==','+_!)W(@IEUGYDWFWGUY(U==',
     '&&&&&==','_@)EWUIyduudw2791==','10001110001==','~root#%~==',
     '100x100x100x==','=+==','_@wew=--==','~~!~~!]]=='
@@ -171,7 +171,7 @@ END = '\033[0m'
 
 def random_pw():
     global q
-    A = random.randint(1,29)
+    A = xx.randint(1,29)
     if A == 1:
         q1 = xx.choice(data6)
         q2 = xx.choice(data1)
@@ -346,12 +346,15 @@ def random_pw():
         q3 = xx.choice(data7)
         q4 = xx.choice(data7)
         q5 = xx.choice(data7)
-    k = xx.randint(1,12)
+    k = xx.randint(2,12)
     salt_bytes = os.urandom(k)
     salt_string = base64.b64encode(salt_bytes).decode('utf-8')  
 
 
-    q = f'{q1}{salt_string}{q2}{q3}{q4}{q5}'
+    q = f'{q1}{salt_string}{q2}{salt_string}{q3}{q4}{salt_string}{q5}'
+
+
+
     return q
 
  
@@ -382,6 +385,14 @@ def pr():
     [+]pw->{q}\n{RED}
     [*][{p}]hech->{e}\n
     {END}''')
+    dist_pas = {
+        'pw':q,'hash_type':p,"hash":e
+    }
+    
+    with open('password_generat_log.json','w') as f:
+        json.dump(dist_pas,f,indent=6)
+
+
 
 try:
     while True:
